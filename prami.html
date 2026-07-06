@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button Click</title>
+</head>
+<body>
+
+    <h2>Select an option:</h2>
+    
+    <input type="radio" id="option1" name="options" value="Option 1">
+    <label for="option1">Option 1</label><br>
+
+    <input type="radio" id="option2" name="options" value="Option 2">
+    <label for="option2">Option 2</label><br>
+
+    <input type="radio" id="option3" name="options" value="Option 3">
+    <label for="option3">Option 3</label><br>
+
+    <div id="message" style="margin-top: 20px;"></div>
+
+    <script>
+        // Get all radio buttons
+        const radios = document.querySelectorAll('input[name="options"]');
+        
+        // Get the div to display the message
+        const messageDiv = document.getElementById('message');
+
+        // Add event listener for each radio button
+        radios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                // Show the selected option's value in the message div
+                messageDiv.textContent = `You selected: ${radio.value}`;
+            });
+        });
+    </script>
+
+</body>
+</html>

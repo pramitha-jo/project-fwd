@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes Finder</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="finderscript.js"></script>
+
+    <style>
+        body{
+            background-color: rgb(8, 245, 245);
+        }
+        /* Simple styles for recipe display */
+        .recipe-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .recipe {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .recipe h2 {
+            margin: 0;
+            color: #333;
+        }
+
+        .recipe ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .recipe ul li {
+            padding: 5px 0;
+        }
+
+        .loading {
+            font-size: 1.5em;
+            color: #555;
+        }
+
+        .error {
+            color: red;
+            font-size: 1.2em;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-right: 200px;
+        }
+    </style>
+   
+</head>
+<body>
+    <a href="recipes.html"><button>Go Back</button></a>
+    <h1>Recipes Finder</h1>
+    <div id="recipeContainer" class="recipe-container"></div>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image:url(https://images.smiletemplates.com/uploads/screenshots/159/0000159215/powerpoint-template-450w.jpg) ; /* Light background color */
+      display: flex;
+      background-repeat:no-repeat;
+      background-size: 100%;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .form-container {
+      background-color: #ffffff; /* White background */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+      width: 100%;
+      max-width: 400px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .l1{
+   
+     
+    margin-bottom: 700%;
+    margin-left: 1000%;
+    background-color:#218838;
+}
+    
+  </style>
+</head>
+<body>
+  <a href="recipes.html"><button class="l1">Go Back</button></a>
+  <div class="form-container">
+    <h1>Submit Feedback</h1>
+    <form id="feedbackForm">
+      <div class="form-group">
+        <label for="ingredient">Ingredient</label>
+        <input type="text" id="ingredient" name="ingredient" placeholder="Enter ingredient" required>
+      </div>
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
+          <option value="">Select a category</option>
+          <option value="Vegetable">Vegetable</option>
+          <option value="Fruit">Fruit</option>
+          <option value=" Eggs and dairy products"> Eggs and dairy products</option>
+          <option value="Spices ">Spices </option>
+          <option value="Pulses & Cereals ">Pulses & Cereals </option>
+          <option value="Essentials">Essentials</option>
+          <option value=" Baking items"> Baking items</option>
+          <option value="Sugars and sweeteners">Sugars and sweeteners</option>
+          <option value="Condiments">Condiments</option>
+          <option value=" Chocos and bread items"> Chocos and bread items</option>
+          <option value="Sweet snacks">Sweet snacks</option>
+          <option value=" Ice creams "> Ice creams </option>
+
+        </select>
+      </div>
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', async function (e) {
+      e.preventDefault(); // Prevent form from refreshing the page
+
+      const ingredient = document.getElementById('ingredient').value;
+      const category = document.getElementById('category').value;
+
+      if (!ingredient || !category) {
+        alert('Please fill out all fields.');
+        return;
+      }
+
+      try {
+        const response = await fetch('http://localhost:4000/feedback', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ ingredient, category }),
+        });
+
+        if (response.ok) {
+          alert('Feedback submitted successfully!');
+          document.getElementById('feedbackForm').reset(); // Clear form
+        } else {
+          const errorText = await response.text();
+          alert(`Error: ${errorText}`);
+        }
+      } catch (error) {
+        console.error('Error submitting feedback:', error);
+        alert('Failed to submit feedback. Please try again.');
+      }
+    });
+  </script>
+</body>
+</html>

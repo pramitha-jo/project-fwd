@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="login_style.css" rel = "stylesheet">
+    <link href="style.css" rel = "stylesheet">
+</head>
+<body class="bdy1">
+    <button class = "b1"><a href="index.html" class="l2">Go Back</a></button>
+    <div class="body1">
+        <div class="container">
+            <!-- Sign-In Form -->
+            <div id="sign-in-form" class="form">
+                <h2>Sign In</h2>
+                <img src="https://thumbs.dreamstime.com/b/login-icon-button-vector-illustration-isolated-white-background-126999474.jpg" width="100"; class="img1" >
+                <br>
+                <input type="email" id="email" placeholder="Email" required><br>
+                <input type="password" id="password" placeholder="Password" required><br>
+
+                <!-- Role Selector -->
+                <label for="role">Role:</label>
+                <select id="role" required>
+                    <option value="User">User</option>
+                    <option value="Admin">Admin</option>
+                </select><br><br>
+
+                <button onclick="signIn()">Sign In</button>
+                <p id="error-msg"></p>
+                <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+            </div>
+    
+            <!-- Sign-Up Form -->
+            <div id="sign-up-form" class="form" style="display:none;">
+                <h2>Sign Up</h2>
+                <input type="email" id="new-email" placeholder="Email" required><br>
+                <input type="password" id="new-password" placeholder="Password" required><br>
+                
+                <!-- Role Selector -->
+                <label for="role1">Role:</label>
+                <select id="role1">
+                    <option value="User">User</option>
+                    <option value="Admin">Admin</option>
+                </select><br><br><br>
+                
+                <button onclick="signUp()">Sign Up</button>
+                <p id="sign-up-msg"></p>
+                <p>Already have an account? <a href="#" onclick="showSignIn()">Sign In</a></p>
+            </div>
+    
+    
+        </div>
+        <script src="login_script.js"></script>
+</body>
+</html>

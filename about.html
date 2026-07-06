@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="style.css" rel = "stylesheet">
+    <style>
+        /* Basic styles for the Terms and Conditions section */
+        #terms {
+            display: none; /* Hide by default */
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Optional styling for the button */
+        .show-terms-btn {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .show-terms-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        // Function to toggle the visibility of the Terms and Conditions
+        function toggleTerms() {
+            var terms = document.getElementById("terms");
+            if (terms.style.display === "none" || terms.style.display === "") {
+                terms.style.display = "block"; // Show the terms
+            } else {
+                terms.style.display = "none"; // Hide the terms
+            }
+        }
+    </script>
+</head>
+<body class = "a2" style="background-image: url(https://t3.ftcdn.net/jpg/06/27/85/70/360_F_627857071_bREuJgK1MTU5YcTPTfgJPOYZ86F1l421.jpg);">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+        <div class="content">
+            
+            <h1 class="a1">About-TasteBudToolkit</h1>
+            <br>
+            <br>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlMyzfmXp2bWMGCMLw2JC4uXpXR1qEGTCBvw&s" class="im2" contenteditable="false">
+            <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfjhkUsJa4nFmUhaf69WdfrRca0zbetiMmjQ&s" class="im3" contenteditable="false">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjr8eYO-bTUxs6vJ29olxaPsFKY5mnQp8JCA&s" class="im1" contenteditable="false">
+            <br>
+            <br>
+            <p contenteditable="false">To our favorite community of home cooks we say:<br><br> Welcome back to TasteBudToolkit! </p>
+    
+       <p contenteditable="false">So if you’re hungry for good food, we’re so happy you’re here! And there’s no better place to start than our community</p>
+       <p contenteditable="false">Cheers and happy cooking<br>
+        <br>
+        Team TasteBudToolkit</p>
+        <br>
+        <p>By using this website, you agree to our <button class="show-terms-btn" onclick="toggleTerms()">Terms and Conditions</button>.</p>
+        <div id = "terms">
+            <h3 contenteditable="false">Terms and Conditions</h3>
+            <ul class="li1" contenteditable="false">
+            <li>Engaging in any data mining, data harvesting, data extracting or any other similar activity in relation to this Website</li>
+            <li> Using this Website to engage in any advertising or marketing.</li>
+            <li>Publishing any Website material in any other media</li>
+            <li>Using this Website in any way that is or may be damaging to this Website</li>
+            </ul>
+        </div>
+        <br>
+        <h3 contenteditable="false">Contact and Follow us</h3>
+
+        <a href="https://www.facebook.com/profile.php?id=61568685740109&mibextid=ZbWKwL" contenteditable="false"> <img src="https://logowik.com/content/uploads/images/672_fb_icon.jpg" class="img2" contenteditable="false"> </a>
+        <br>
+        <br>
+        </div>
+        <div class="footer">
+            &copy; <span id="year"></span> TasteBudToolkit. All rights reserved.
+        </div>
+        
+        <script>
+            // Automatically set the current year
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+</body>
+</html>

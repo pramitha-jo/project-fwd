@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <link href="style.css" rel = "stylesheet">
+    <link href="style2.css" rel = "stylesheet">
+    <script src="auth.js"></script>
+    <script>
+        function scrollWin(x,y){
+            window.scrollBy(x,y);
+        }
+        function sortTableById(tableId) {
+        const table = document.getElementById(tableId);
+        const rows = Array.from(table.querySelectorAll("tbody tr"));
+        const tbody = table.querySelector("tbody");
+
+        // Sort rows alphabetically by the first column
+        rows.sort((a, b) => {
+            const cellA = a.cells[0].innerText.toLowerCase();
+            const cellB = b.cells[0].innerText.toLowerCase();
+            return cellA.localeCompare(cellB);
+        });
+
+        // Append sorted rows back to the tbody
+        rows.forEach(row => tbody.appendChild(row));
+    }
+
+    // Automatically sort specified tables on page load
+    window.addEventListener('DOMContentLoaded', () => {
+        sortTableById("itemTable1");
+        sortTableById("itemTable2");
+        sortTableById("itemTable3");
+        sortTableById("itemTable4");
+        sortTableById("itemTable5");
+        sortTableById("itemTable6");
+        sortTableById("itemTable7");
+        sortTableById("itemTable8");
+        sortTableById("itemTable9");
+        sortTableById("itemTable10");
+        sortTableById("itemTable11");
+        sortTableById("itemTable12");
+        sortTableById("itemTable13");
+        sortTableById("itemTable14");
+        sortTableById("itemTable15");
+        sortTableById("itemTable16");
+        sortTableById("itemTable17");
+        sortTableById("itemTable18");
+        sortTableById("itemTable19");
+        sortTableById("itemTable20");
+        sortTableById("itemTable21");
+        sortTableById("itemTable22");
+        sortTableById("itemTable23");
+        sortTableById("itemTable24");
+        sortTableById("itemTable25");
+        sortTableById("itemTable26");
+        sortTableById("itemTable27");
+        sortTableById("itemTable28");
+        sortTableById("itemTable29");
+    });
+   
+
+    </script>
+</head>
+<body>
+    <h1 class="he1">What do you want to make??</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+    <a href="index.html"><button class="l1">Logout</button></a>
+    <br>
+    <br>
+    <br>
+    <div class="imgrow">
+        <div class="imgcntr">
+            <a href="#target">
+                <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2016/09/breakfast-recipes-fb.jpg" width="330px" height="300px" class="fimg1">
+            </a>
+            <a href="#target" class="v1">&nbsp;Breakfast</a>
+        </div>
+        <div class="imgcntr">
+            <a href="#target1">
+                <img src="https://c.ndtvimg.com/2020-09/if4pp5j8_vegetarian_625x300_30_September_20.jpg" width="330px" height="300px" class="fimg2">
+            </a>
+            <a href="#target1" class = "v1">Main Dishes</a>
+        </div>
+        <div class="imgcntr">
+            <a href="#target2">
+                <img src="https://www.tastingtable.com/img/gallery/25-most-popular-snacks-in-america-ranked-worst-to-best/l-intro-1645492743.jpg" width="330px" height="300px" class="fimg3">
+            </a>
+            <a href="#target2" class = "v1">Snacks</a>
+        </div>
+        <div class="imgcntr">
+            <a href="#target3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-4IIs96NyUEL_2xYeX7Yj2Cd98FDsTO0BYA&s" width="330px" height="300px" class="fimg4">
+            </a>
+            <a href="#target3" class = "v1">Shakes & Desserts</a>
+        </div>
+    </div>
+    <br>
+    <br>    
+    <div style="margin-bottom: 590px;"></div>
+
+    <div id = "target">
+        <div id="recipeContainer" class="recipe-container"> </div>
+        <h1 class="he1">What's in your basket for breakfast??</h1>
+        <button onclick="scrollWin(0,-1320)" class = "b4">Go Back</button>
+        <h2 class = "g3">Essentials&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;Vegetables&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;Spices&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dairy Products&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h2 class = "g3">&nbsp;&nbsp;Baking Items</h2>
+        <div class="tables-row">
+            <!-- Table 1 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput1" placeholder="Search for an item..." oninput="showSuggestions(1)" autocomplete="off">
+                    <button onclick="searchTable(1)">Search</button>
+                    <div id="suggestions1" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable1">
+                    <tr><td onclick="selectItem('Water')">Water</td></tr>
+                    <tr><td onclick="selectItem('Olive oil')">Olive oil</td></tr>
+                    <tr><td onclick="selectItem('Sugar')">Sugar</td></tr>
+                    <tr><td onclick="selectItem('Salt')">Salt</td></tr>
+                    <tr><td onclick="selectItem('White rice')">White rice</td></tr>
+                    <tr><td onclick="selectItem('Chilli powder')">Chilli powder</td></tr>
+                    <tr><td onclick="selectItem('Turmeric powder')">Tumeric powder</td></tr>
+                    <tr><td onclick="selectItem('Tamarind')">Tamarind</td></tr>
+                    <tr><td onclick="selectItem('Honey')">Honey</td></tr>
+                    <tr><td onclick="selectItem('Lemon')">Lemon</td></tr>
+                    <tr><td onclick="selectItem('Baking soda')">Baking soda</td></tr>
+                    <tr><td onclick="selectItem('Pepper')">Pepper</td></tr>
+                    <tr><td onclick="selectItem('Ginger')">Ginger</td></tr>
+                    <tr><td onclick="selectItem('Garlic')">Garlic</td></tr>
+                    <tr><td onclick="selectItem('Cashew')">Cashew</td></tr>
+                    <tr><td onclick="selectItem('Dry grapes')">Dry grapes</td></tr>
+                    <tr><td onclick="selectItem('Almond')">Almond</td></tr>
+            </table>
+                </table>
+            </div>
+    
+            <!-- Table 2 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput2" placeholder="Search for an item..." oninput="showSuggestions(2)" autocomplete="off">
+                    <button onclick="searchTable(2)">Search</button>
+                    <div id="suggestions2" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable2">
+                    <tr><td onclick="selectItem('tomato')">Tomato</td></tr>
+                    <tr><td onclick="selectItem('Onion')">Onion</td></tr>
+                    <tr><td onclick="selectItem('Chilli')">Chilli</td></tr>
+                    <tr><td onclick="selectItem('Potato')">Potato</td></tr>
+                    <tr><td onclick="selectItem('Cucumber')">Cucumber</td></tr>
+                    <tr><td onclick="selectItem('Carrot')">Carrot</td></tr>
+                    <tr><td onclick="selectItem('Mushroom')">Mushroom</td></tr>
+                    <tr><td onclick="selectItem('Cauliflower')">Cauliflower</td></tr>
+                    <tr><td onclick="selectItem('Coriander leaves')">Coriander leaves</td></tr>
+                    <tr><td onclick="selectItem('Curry leaves')">Curry leaves</td></tr>
+                    <tr><td onclick="selectItem('Fenugreek leaves')">Fenugreek leaves</td></tr>
+                    <tr><td onclick="selectItem('sweet potato')">Sweet potato</td></tr>
+                    <tr><td onclick="selectItem('Pumpkin')">Pumpkin</td></tr>
+                    <tr><td onclick="selectItem('Drumstick')">Drumstick</td></tr>
+                    <tr><td onclick="selectItem('Raddish')">Raddish</td></tr>
+                    <tr><td onclick="selectItem('Cabbage')">Cabbage</td></tr>
+                    <tr><td onclick="selectItem('Yam')">Yam</td></tr>
+                    <tr><td onclick="selectItem('Brinjal')">Brinjal</td></tr>
+                    <tr><td onclick="selectItem('Beetroot')">Beetroot</td></tr>
+                    <tr><td onclick="selectItem('Wild cabbage')">Wild cabbage</td></tr>
+                    <tr><td onclick="selectItem('Palak')">Palak</td></tr>
+                    <tr><td onclick="selectItem('Spinach')">Spinach</td></tr>
+                    <tr><td onclick="selectItem('Okra')">Okra</td></tr>
+                    <tr><td onclick="selectItem('Soyabean')">Soyabean</td></tr>
+                    <tr><td onclick="selectItem('Bell pepper')">Bell pepper</td></tr>
+            </table>
+                </table>
+            </div>
+    
+            <!-- Table 3 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput3" placeholder="Search for an item..." oninput="showSuggestions(3)" autocomplete="off">
+                    <button onclick="searchTable(3)">Search</button>
+                    <div id="suggestions3" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable3">
+                    <tr><td onclick="selectItem('Turmeric powder')">Turmeric powder</td></tr>
+                    <tr><td onclick="selectItem('Chilli powder')">Chilli powder</td></tr>
+                    <tr><td onclick="selectItem('Ginger paste')">Ginger paste</td></tr>
+                    <tr><td onclick="selectItem('Garlic paste')">Garlic paste</td></tr>
+                    <tr><td onclick="selectItem('Pepper')">Pepper</td></tr>
+                    <tr><td onclick="selectItem('Dry chilli')">Dry chilli</td></tr>
+                    <tr><td onclick="selectItem('Cloves')">Cloves</td></tr>
+                    <tr><td onclick="selectItem('Saffron powder')">Saffron powder</td></tr>
+                    <tr><td onclick="selectItem('Mint seeds')">Mint seeds</td></tr>
+                    <tr><td onclick="selectItem('Coriander powder')">Coriander powder</td></tr>
+                    <tr><td onclick="selectItem('Cinnamon')">Cinnamon</td></tr>
+                    <tr><td onclick="selectItem('Cumin')">Cumin</td></tr>
+                    <tr><td onclick="selectItem('Musturd seeds')">Musturd seeds</td></tr>
+                    <tr><td onclick="selectItem('cardamom')">Cardamom</td></tr>
+                    <tr><td onclick="selectItem('Asafoetida')">Asafoetida</td></tr>
+                    <tr><td onclick="selectItem('Fenugreek')">Fenugreek</td></tr>
+            </table>
+                </table>
+            </div>
+
+            <!-- Table 4 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput4" placeholder="Search for an item..." oninput="showSuggestions(4)" autocomplete="off">
+                    <button onclick="searchTable(4)">Search</button>
+                    <div id="suggestions4" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable4">
+                    <tr><td onclick="selectItem('Butter')">Butter</td></tr>
+                    <tr><td onclick="selectItem('Milk')">Milk</td></tr>
+                    <tr><td onclick="selectItem('Ghee')">Ghee</td></tr>
+                    <tr><td onclick="selectItem('Egg')">Egg</td></tr>
+                    <tr><td onclick="selectItem('Curd')">Curd</td></tr>
+                    <tr><td onclick="selectItem('Fried eggs')">Fried eggs</td></tr>
+                    <tr><td onclick="selectItem('Cheese')">Cheese</td></tr>
+                    <tr><td onclick="selectItem('Butter milk')">Butter milk</td></tr>
+                    <tr><td onclick="selectItem('Milk powder')">milk powder</td></tr>
+                    <tr><td onclick="selectItem('Paneer')">Paneer</td></tr>
+            </table>
+                </table>
+            </div>
+
+            <!-- Table 5 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput5" placeholder="Search for an item..." oninput="showSuggestions(5)" autocomplete="off">
+                    <button onclick="searchTable(5)">Search</button>
+                    <div id="suggestions5" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable5">
+                    <tr><td onclick="selectItem('White rice')">White rice</td></tr>
+                    <tr><td onclick="selectItem('Basmati rice')">Basmati rice</td></tr>
+                    <tr><td onclick="selectItem('Sonamasuri rice')">Sonamasuri rice</td></tr>
+                    <tr><td onclick="selectItem('Rice flour')">Rice flour</td></tr>
+                    <tr><td onclick="selectItem('Wheat Flour')">Wheat Flour</td></tr>
+                    <tr><td onclick="selectItem('Gram flour')">Gram flour</td></tr>
+                    <tr><td onclick="selectItem('Maida')">Maida</td></tr>
+                    <tr><td onclick="selectItem('Badam powder')">Badam powder</td></tr>
+                    <tr><td onclick="selectItem('Poha')">Poha</td></tr>
+                    <tr><td onclick="selectItem('Vermicelli')">Vermicelli</td></tr>
+                    <tr><td onclick="selectItem('Idli rava')">Idli rava</td></tr>
+                    <tr><td onclick="selectItem('Upma rava')">Upma rava</td></tr>
+                    <tr><td onclick="selectItem('Chiroti rava')">Chiroti rava</td></tr>
+                    <tr><td onclick="selectItem('Ragi flour')">Ragi flour</td></tr>
+                    <tr><td onclick="selectItem('Jower Flour')">Jower Flour</td></tr>
+                    <tr><td onclick="selectItem('Bajra Flour')">Bajra Flour</td></tr>
+                    <tr><td onclick="selectItem('Barley')">Barley</td></tr>
+                    <tr><td onclick="selectItem('Corn')">Corn</td></tr>
+                    <tr><td onclick="selectItem('Chana dal')">Chana dal</td></tr>
+                    <tr><td onclick="selectItem('Urad dal')">Urad dal</td></tr>
+                    <tr><td onclick="selectItem('Green gram')">Green gram</td></tr>
+                    <tr><td onclick="selectItem('Chick peas')">Chick peas</td></tr>
+                    <tr><td onclick="selectItem('Kidney beans')">Kidney beans</td></tr>
+                    <tr><td onclick="selectItem('Ground nut')">Ground nut</td></tr>
+                    <tr><td onclick="selectItem('coconut')">coconut</td></tr>
+                    <tr><td onclick="selectItem('Moong dal')">Moong dal</td></tr>
+            </table>
+                </table>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <a href="feedback.html" target="_blank">
+            <button class="s1" >Any Suggestions on ingredients?? </button></a>
+        <!-- Basket at the bottom -->
+        <div class="basket-container">
+            <h2>Basket</h2>
+            <ul id="basket"></ul>
+            <button id="findRecipesBtn" onclick="findRecipes()">Find Recipes</button>
+        </div>
+        <div id="recipeList"></div>
+        <script src="script.js"></script>
+        </div>
+        <div style="margin-bottom: 590px;"></div>
+        
+            <!-- Recipe results will be displayed here -->
+        </div>
+        <div id = "target1">
+            <h1 class="he1">What's in your basket for main dish??</h1>
+            <button onclick="scrollWin(0,-2585)" class = "b5">Go Back</button>
+            <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Essentials&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vegetables&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eggs and dairy products&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spices&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            
+            <div class="tables-row1">
+                <!-- Table 1 -->
+                <div class="table-container">
+                    <div class="search-container">
+                        <input type="text" id="searchInput6" placeholder="Search for an item..." oninput="showSuggestions(6)" autocomplete="off">
+                        <button onclick="searchTable(6)">Search</button>
+                        <div id="suggestions6" class="suggestions-box"></div>
+                    </div>
+                    <table id="itemTable6">
+                        <tr><td onclick="selectItem1('Water')">Water</td></tr>
+                        <tr><td onclick="selectItem1('Olive oil')">Olive oil</td></tr>
+                        <tr><td onclick="selectItem1('Sugar')">Sugar</td></tr>
+                        <tr><td onclick="selectItem1('Salt')">Salt</td></tr>
+                        <tr><td onclick="selectItem1('White rice')">White rice</td></tr>
+                        <tr><td onclick="selectItem1('Chilli powder')">Chilli powder</td></tr>
+                        <tr><td onclick="selectItem1('Turmeric powder')">Tumeric powder</td></tr>
+                        <tr><td onclick="selectItem1('Tamarind')">Tamarind</td></tr>
+                        <tr><td onclick="selectItem1('Honey')">Honey</td></tr>
+                        <tr><td onclick="selectItem1('Lemon')">Lemon</td></tr>
+                        <tr><td onclick="selectItem1('Baking soda')">Baking soda</td></tr>
+                        <tr><td onclick="selectItem1('Pepper')">Pepper</td></tr>
+                        <tr><td onclick="selectItem1('Ginger')">Ginger</td></tr>
+                        <tr><td onclick="selectItem1('Garlic')">Garlic</td></tr>
+                        <tr><td onclick="selectItem1('Cashew')">Cashew</td></tr>
+                        <tr><td onclick="selectItem1('Dry grapes')">Dry grapes</td></tr>
+                        <tr><td onclick="selectItem1('Almond')">Almond</td></tr>
+                </table>
+                    </table>
+                </div>
+                
+        
+                <!-- Table 2 -->
+                <div class="table-container">
+                    <div class="search-container">
+                        <input type="text" id="searchInput7" placeholder="Search for an item..." oninput="showSuggestions(7)" autocomplete="off">
+                        <button onclick="searchTable(7)">Search</button>
+                        <div id="suggestions7" class="suggestions-box"></div>
+                    </div>
+                    <table id="itemTable7">
+                        <tr><td onclick="selectItem1('Tomato')">Tomato</td></tr>
+                        <tr><td onclick="selectItem1('Onion')">Onion</td></tr>
+                        <tr><td onclick="selectItem1('Chilli')">Chilli</td></tr>
+                        <tr><td onclick="selectItem1('Potato')">Potato</td></tr>
+                        <tr><td onclick="selectItem1('Cucumber')">Cucumber</td></tr>
+                        <tr><td onclick="selectItem1('Carrot')">Carrot</td></tr>
+                        <tr><td onclick="selectItem1('Mushroom')">Mushroom</td></tr>
+                        <tr><td onclick="selectItem1('Cauliflower')">Cauliflower</td></tr>
+                        <tr><td onclick="selectItem1('Coriander leaves')">Coriander leaves</td></tr>
+                        <tr><td onclick="selectItem1('Curry leaves')">Curry leaves</td></tr>
+                        <tr><td onclick="selectItem1('Fenugreek leaves')">Fenugreek leaves</td></tr>
+                        <tr><td onclick="selectItem1('Sweet potato')">Sweet potato</td></tr>
+                        <tr><td onclick="selectItem1('Pumpkin')">Pumpkin</td></tr>
+                        <tr><td onclick="selectItem1('Drumstick')">Drumstick</td></tr>
+                        <tr><td onclick="selectItem1('Raddish')">Raddish</td></tr>
+                        <tr><td onclick="selectItem1('Cabbage')">Cabbage</td></tr>
+                        <tr><td onclick="selectItem1('Yam')">Yam</td></tr>
+                        <tr><td onclick="selectItem1('Brinjal')">Brinjal</td></tr>
+                        <tr><td onclick="selectItem1('Beetroot')">Beetroot</td></tr>
+                        <tr><td onclick="selectItem1('Wild cabbage')">Wild cabbage</td></tr>
+                        <tr><td onclick="selectItem1('Palak')">Palak</td></tr>
+                        <tr><td onclick="selectItem1('Spinach')">Spinach</td></tr>
+                        <tr><td onclick="selectItem1('Okra')">Okra</td></tr>
+                        <tr><td onclick="selectItem1('Soyabean')">Soyabean</td></tr>
+                        <tr><td onclick="selectItem1('Bell pepper')">Bell pepper</td></tr>
+                </table>
+                    </table>
+                </div>
+        
+                <!-- Table 3 -->
+                <div class="table-container">
+                    <div class="search-container">
+                        <input type="text" id="searchInput8" placeholder="Search for an item..." oninput="showSuggestions(8)" autocomplete="off">
+                        <button onclick="searchTable(8)">Search</button>
+                        <div id="suggestions8" class="suggestions-box"></div>
+                    </div>
+                    <table id="itemTable8">
+                        <tr><td onclick="selectItem1('Butter')">Butter</td></tr>
+                        <tr><td onclick="selectItem1('Milk')">Milk</td></tr>
+                        <tr><td onclick="selectItem1('Ghee')">Ghee</td></tr>
+                        <tr><td onclick="selectItem1('Egg')">Egg</td></tr>
+                        <tr><td onclick="selectItem1('Curd')">Curd</td></tr>
+                        <tr><td onclick="selectItem1('Fried eggs')">Fried eggs</td></tr>
+                        <tr><td onclick="selectItem1('Cheese')">Cheese</td></tr>
+                        <tr><td onclick="selectItem1('Butter milk')">Butter milk</td></tr>
+                        <tr><td onclick="selectItem1('Milk powder')">milk powder</td></tr>
+                        <tr><td onclick="selectItem1('Paneer')">Paneer</td></tr>
+                </table>
+                    </table>
+                </div>
+    
+                <!-- Table 4 -->
+                <div class="table-container">
+                    <div class="search-container">
+                        <input type="text" id="searchInput9" placeholder="Search for an item..." oninput="showSuggestions(9)" autocomplete="off">
+                        <button onclick="searchTable(9)">Search</button>
+                        <div id="suggestions9" class="suggestions-box"></div>
+                    </div>
+                    <table id="itemTable9">
+                        <tr><td onclick="selectItem1('Turmeric powder')">Turmeric powder</td></tr>
+                        <tr><td onclick="selectItem1('Chilli powder')">Chilli powder</td></tr>
+                        <tr><td onclick="selectItem1('Ginger paste')">Ginger paste</td></tr>
+                        <tr><td onclick="selectItem1('Garlic paste')">Garlic paste</td></tr>
+                        <tr><td onclick="selectItem1('Pepper')">Pepper</td></tr>
+                        <tr><td onclick="selectItem1('Dry chilli')">Dry chilli</td></tr>
+                        <tr><td onclick="selectItem1('Cloves')">Cloves</td></tr>
+                        <tr><td onclick="selectItem1('Saffron powder')">Saffron powder</td></tr>
+                        <tr><td onclick="selectItem1('Mint seeds')">Mint seeds</td></tr>
+                        <tr><td onclick="selectItem1('Coriander powder')">Coriander powder</td></tr>
+                        <tr><td onclick="selectItem1('Cinnamon')">Cinnamon</td></tr>
+                        <tr><td onclick="selectItem1('Cumin')">Cumin</td></tr>
+                        <tr><td onclick="selectItem1('Musturd seeds')">Musturd seeds</td></tr>
+                        <tr><td onclick="selectItem1('Cardamom')">Cardamom</td></tr>
+                        <tr><td onclick="selectItem1('Asafoetida')">Asafoetida</td></tr>
+                        <tr><td onclick="selectItem1('Fenugreek')">Fenugreek</td></tr>
+                </table>
+                    </table>
+                </div>
+
+
+                <h2 class = "g3">Fruits</h2>
+                <h2 class = "g3">&nbsp;&nbsp;Pulses & Cereals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;Baking Items&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;Condiments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        
+                <!-- Table 5 -->
+                <div class="table-container">
+                    <div class="search-container">
+                        <input type="text" id="searchInput10" placeholder="Search for an item..." oninput="showSuggestions(10)" autocomplete="off">
+                        <button onclick="searchTable(10)">Search</button>
+                        <div id="suggestions10" class="suggestions-box"></div>
+                    </div>
+                    <table id="itemTable10">
+                        <tr><td onclick="selectItem1('Mango')">Mango</td></tr>
+                        <tr><td onclick="selectItem1('Apple')">Apple</td></tr>
+                        <tr><td onclick="selectItem1('Banana')">Banana</td></tr>
+                        <tr><td onclick="selectItem1('Grapes')">Grapes</td></tr>
+                        <tr><td onclick="selectItem1('Pomegranate')">pomegranate</td></tr>
+                        <tr><td onclick="selectItem1('Cherry')">Cherry</td></tr>
+                        <tr><td onclick="selectItem1('Strawberry')">Strawberry</td></tr>
+                        <tr><td onclick="selectItem1('Pineapple')">Pineapple</td></tr>
+                        <tr><td onclick="selectItem1('kiwi')">kiwi</td></tr>
+                        <tr><td onclick="selectItem1('Guava')">Guava</td></tr>
+                         <tr><td onclick="selectItem1('peach')">peach</td></tr>
+                        <tr><td onclick="selectItem1('Orange')">Orange</td></tr>
+                        <tr><td onclick="selectItem1('Papaya')">Papaya</td></tr>
+                </table>
+                    </table>
+                </div>
+                <!-- Table 6 -->
+                <div class="table-container">
+                    <div class="search-container">
+                        <input type="text" id="searchInput11" placeholder="Search for an item..." oninput="showSuggestions(11)" autocomplete="off">
+                        <button onclick="searchTable(11)">Search</button>
+                        <div id="suggestions11" class="suggestions-box"></div>
+                    </div>
+                    <table id="itemTable11">
+                        <tr><td onclick="selectItem1('Corn')">Corn</td></tr>
+                        <tr><td onclick="selectItem1('Chana dal')">Chana dal</td></tr>
+                        <tr><td onclick="selectItem1('Urad dal')">Urad dal</td></tr>
+                        <tr><td onclick="selectItem1('Green gram')">Green gram</td></tr>
+                        <tr><td onclick="selectItem1('Chick peas')">Chick peas</td></tr>
+                        <tr><td onclick="selectItem1('Kidney beans')">Kidney beans</td></tr>
+                        <tr><td onclick="selectItem1('Ground nut')">Ground nut</td></tr>
+                        <tr><td onclick="selectItem1('coconut')">coconut</td></tr>
+                        <tr><td onclick="selectItem1('Moong dal')">Moong dal</td></tr>
+                        <tr><td onclick="selectItem1('Ragi')">Ragi</td></tr>
+                        <tr><td onclick="selectItem1('Peanut')">Peanut</td></tr>
+                        <tr><td onclick="selectItem1('Lentils')">Lentils</td></tr>
+                        <tr><td onclick="selectItem1('Oats')">Oats</td></tr>
+                        <tr><td onclick="selectItem1('Finger millet')">Finger millet</td></tr>
+
+                </table>
+                    </table>
+                </div>
+
+                <!-- Table 7 -->
+                <div class="table-container">
+                    <div class="search-container">
+                        <input type="text" id="searchInput12" placeholder="Search for an item..." oninput="showSuggestions(12)" autocomplete="off">
+                        <button onclick="searchTable(12)">Search</button>
+                        <div id="suggestions12" class="suggestions-box"></div>
+                    </div>
+                    <table id="itemTable12">
+                        <tr><td onclick="selectItem1('White rice')">White rice</td></tr>
+                        <tr><td onclick="selectItem1('Basmati rice')">Basmati rice</td></tr>
+                        <tr><td onclick="selectItem1('Sonamasuri rice')">Sonamasuri rice</td></tr>
+                        <tr><td onclick="selectItem1('Rice flour')">Rice flour</td></tr>
+                        <tr><td onclick="selectItem1('Wheat Flour')">Wheat Flour</td></tr>
+                        <tr><td onclick="selectItem1('Gram flour')">Gram flour</td></tr>
+                        <tr><td onclick="selectItem1('Maida')">Maida</td></tr>
+                        <tr><td onclick="selectItem1('Badam powder')">Badam powder</td></tr>
+                        <tr><td onclick="selectItem1('Poha')">Poha</td></tr>
+                        <tr><td onclick="selectItem1('Vermicelli')">Vermicelli</td></tr>
+                        <tr><td onclick="selectItem1('Idli rava')">Idli rava</td></tr>
+                        <tr><td onclick="selectItem1('Upma rava')">Upma rava</td></tr>
+                        <tr><td onclick="selectItem1('Chiroti rava')">Chiroti rava</td></tr>
+                        <tr><td onclick="selectItem1('Ragi flour')">Ragi flour</td></tr>
+                        <tr><td onclick="selectItem1('Jower Flour')">Jower Flour</td></tr>
+                        <tr><td onclick="selectItem1('Bajra Flour')">Bajra Flour</td></tr>
+                        <tr><td onclick="selectItem1('Barley')">Barley</td></tr>
+                        <tr><td onclick="selectItem1('Ground nut')">Ground nut</td></tr>
+                        <tr><td onclick="selectItem1('coconut')">coconut</td></tr>
+
+                </table>
+                    </table>
+                </div>
+
+                <!-- Table 8 -->
+                <div class="table-container">
+                    <div class="search-container">
+                        <input type="text" id="searchInput13" placeholder="Search for an item..." oninput="showSuggestions(13)" autocomplete="off">
+                        <button onclick="searchTable(13)">Search</button>
+                        <div id="suggestions13" class="suggestions-box"></div>
+                    </div>
+                    <table id="itemTable13">
+                        <tr><td onclick="selectItem1('Rock salt')">Rock salt</td></tr>
+                        <tr><td onclick="selectItem1('Rose water')">Rose water</td></tr>
+                        <tr><td onclick="selectItem1('Coconut water')">Coconut water</td></tr>
+                        <tr><td onclick="selectItem1(' Tomato Sauce')">Tomato Sauce</td></tr>
+                        <tr><td onclick="selectItem1('Chilli Sauce')">Chilli Sauce</td></tr>
+                        <tr><td onclick="selectItem1('Jam')">Jam</td></tr>
+                        <tr><td onclick="selectItem1('Soya sauce')">Soya sauce</td></tr>
+                        <tr><td onclick="selectItem1('Vinegar')">Vinegar</td></tr>
+                        <tr><td onclick="selectItem1('Mayonnaice')">Mayonnaice</td></tr>
+
+                </table>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <a href="feedback.html" target="_blank">
+            <button class="s1">Any Suggestions on ingredients?? </button></a>
+
+        <!-- Basket at the bottom -->
+    <div class="basket-container1">
+        <h2>Basket</h2>
+        <ul id="basket1"></ul>
+        <button id="findRecipesBtn" onclick="findRecipes1()">Find Recipes</button>
+    </div>
+
+        <script src="script1.js"></script>
+    </div>
+    <div style="margin-bottom: 590px;"></div>
+
+
+    <div id = "target2">
+        <h1 class="he1">What's in your basket for snacks??</h1>
+        <button onclick="scrollWin(0,-4180)" class = "b6">Go Back</button>
+        <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Essentials&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vegetables&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Spices&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h2 class = "g3">Eggs and dairy products&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Baking items</h2>
+        <div class="tables-row2">
+            <!-- Table 1 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput14" placeholder="Search for an item..." oninput="showSuggestions(14)" autocomplete="off">
+                    <button onclick="searchTable(14)">Search</button>
+                    <div id="suggestions14" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable14">
+                    <tr><td onclick="selectItem2('Water')">Water</td></tr>
+                    <tr><td onclick="selectItem2('Olive oil')">Olive oil</td></tr>
+                    <tr><td onclick="selectItem2('Sugar')">Sugar</td></tr>
+                    <tr><td onclick="selectItem2('Salt')">Salt</td></tr>
+                    <tr><td onclick="selectItem2('White rice')">White rice</td></tr>
+                    <tr><td onclick="selectItem2('Chilli powder')">Chilli powder</td></tr>
+                    <tr><td onclick="selectItem2('Turmeric powder')">Tumeric powder</td></tr>
+                    <tr><td onclick="selectItem2('Tamarind')">Tamarind</td></tr>
+                    <tr><td onclick="selectItem2('Honey')">Honey</td></tr>
+                    <tr><td onclick="selectItem2('Lemon')">Lemon</td></tr>
+                    <tr><td onclick="selectItem2('Baking soda')">Baking soda</td></tr>
+                    <tr><td onclick="selectItem2('Pepper')">Pepper</td></tr>
+                    <tr><td onclick="selectItem2('Ginger')">Ginger</td></tr>
+                    <tr><td onclick="selectItem2('Garlic')">Garlic</td></tr>
+                    <tr><td onclick="selectItem2('Cashew')">Cashew</td></tr>
+                    <tr><td onclick="selectItem2('Dry grapes')">Dry grapes</td></tr>
+                    <tr><td onclick="selectItem2('Almond')">Almond</td></tr>
+            </table>
+                </table>
+            </div>
+    
+            <!-- Table 2 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput15" placeholder="Search for an item..." oninput="showSuggestions(15)" autocomplete="off">
+                    <button onclick="searchTable(15)">Search</button>
+                    <div id="suggestions15" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable15">
+                    <tr><td onclick="selectItem2('Tomato')">Tomato</td></tr>
+                    <tr><td onclick="selectItem2('Onion')">Onion</td></tr>
+                    <tr><td onclick="selectItem2('Chilli')">Chilli</td></tr>
+                    <tr><td onclick="selectItem2('Potato')">Potato</td></tr>
+                    <tr><td onclick="selectItem2('Cucumber')">Cucumber</td></tr>
+                    <tr><td onclick="selectItem2('Carrot')">Carrot</td></tr>
+                    <tr><td onclick="selectItem2('Mushroom')">Mushroom</td></tr>
+                    <tr><td onclick="selectItem2('Cauliflower')">Cauliflower</td></tr>
+                    <tr><td onclick="selectItem2('Coriander leaves')">Coriander leaves</td></tr>
+                    <tr><td onclick="selectItem2('Curry leaves')">Curry leaves</td></tr>
+                    <tr><td onclick="selectItem2('Fenugreek leaves')">Fenugreek leaves</td></tr>
+                    <tr><td onclick="selectItem2('Sweet potato')">Sweet potato</td></tr>
+                    <tr><td onclick="selectItem2('Pumpkin')">Pumpkin</td></tr>
+                    <tr><td onclick="selectItem2('Drumstick')">Drumstick</td></tr>
+                    <tr><td onclick="selectItem2('Raddish')">Raddish</td></tr>
+                    <tr><td onclick="selectItem2('Cabbage')">Cabbage</td></tr>
+                    <tr><td onclick="selectItem2('Yam')">Yam</td></tr>
+                    <tr><td onclick="selectItem2('Brinjal')">Brinjal</td></tr>
+                    <tr><td onclick="selectItem2('Beetroot')">Beetroot</td></tr>
+                    <tr><td onclick="selectItem2('Wild cabbage')">Wild cabbage</td></tr>
+                    <tr><td onclick="selectItem2('Palak')">Palak</td></tr>
+                    <tr><td onclick="selectItem2('Spinach')">Spinach</td></tr>
+                    <tr><td onclick="selectItem2('Okra')">Okra</td></tr>
+                    <tr><td onclick="selectItem2('Soyabean')">Soyabean</td></tr>
+                    <tr><td onclick="selectItem2('Bell pepper')">Bell pepper</td></tr>
+            </table>
+                </table>
+            </div>
+    
+            <!-- Table 3 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput16" placeholder="Search for an item..." oninput="showSuggestions(16)" autocomplete="off">
+                    <button onclick="searchTable(16)">Search</button>
+                    <div id="suggestions16" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable16">
+                    <tr><td onclick="selectItem2('Turmeric powder')">Turmeric powder</td></tr>
+                    <tr><td onclick="selectItem2('Chilli powder')">Chilli powder</td></tr>
+                    <tr><td onclick="selectItem2('Ginger paste')">Ginger paste</td></tr>
+                    <tr><td onclick="selectItem2('Garlic paste')">Garlic paste</td></tr>
+                    <tr><td onclick="selectItem2('Pepper')">Pepper</td></tr>
+                    <tr><td onclick="selectItem2('Dry chilli')">Dry chilli</td></tr>
+                    <tr><td onclick="selectItem2('Cloves')">Cloves</td></tr>
+                    <tr><td onclick="selectItem2('Saffron powder')">Saffron powder</td></tr>
+                    <tr><td onclick="selectItem2('Mint seeds')">Mint seeds</td></tr>
+                    <tr><td onclick="selectItem2('Coriander powder')">Coriander powder</td></tr>
+                    <tr><td onclick="selectItem2('Cinnamon')">Cinnamon</td></tr>
+                    <tr><td onclick="selectItem2('Cumin')">Cumin</td></tr>
+                    <tr><td onclick="selectItem2('Musturd seeds')">Musturd seeds</td></tr>
+                    <tr><td onclick="selectItem2('Cardamom')">Cardamom</td></tr>
+                    <tr><td onclick="selectItem2('Asafoetida')">Asafoetida</td></tr>
+                    <tr><td onclick="selectItem2('Fenugreek')">Fenugreek</td></tr>
+            </table>
+                </table>
+            </div>
+
+            <!-- Table 4 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput17" placeholder="Search for an item..." oninput="showSuggestions(17)" autocomplete="off">
+                    <button onclick="searchTable(17)">Search</button>
+                    <div id="suggestions17" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable17">
+                    <tr><td onclick="selectItem2('Butter')">Butter</td></tr>
+                    <tr><td onclick="selectItem2('Milk')">Milk</td></tr>
+                    <tr><td onclick="selectItem2('Ghee')">Ghee</td></tr>
+                    <tr><td onclick="selectItem2('Egg')">Egg</td></tr>
+                    <tr><td onclick="selectItem2('Curd')">Curd</td></tr>
+                    <tr><td onclick="selectItem2('Fried eggs')">Fried eggs</td></tr>
+                    <tr><td onclick="selectItem2('Cheese')">Cheese</td></tr>
+                    <tr><td onclick="selectItem2('Butter milk')">Butter milk</td></tr>
+                    <tr><td onclick="selectItem2('Milk powder')">milk powder</td></tr>
+                    <tr><td onclick="selectItem2('Paneer')">Paneer</td></tr>
+            </table>
+                </table>
+            </div>
+            <!-- Table 5 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput18" placeholder="Search for an item..." oninput="showSuggestions(18)" autocomplete="off">
+                    <button onclick="searchTable(18)">Search</button>
+                    <div id="suggestions18" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable18">
+                    <tr><td onclick="selectItem2('White rice')">White rice</td></tr>
+                    <tr><td onclick="selectItem2('Basmati rice')">Basmati rice</td></tr>
+                    <tr><td onclick="selectItem2('Sonamasuri rice')">Sonamasuri rice</td></tr>
+                    <tr><td onclick="selectItem2('Rice flour')">Rice flour</td></tr>
+                    <tr><td onclick="selectItem2('Wheat Flour')">Wheat Flour</td></tr>
+                    <tr><td onclick="selectItem2('Gram flour')">Gram flour</td></tr>
+                    <tr><td onclick="selectItem2('Maida')">Maida</td></tr>
+                    <tr><td onclick="selectItem2('Badam powder')">Badam powder</td></tr>
+                    <tr><td onclick="selectItem2('Poha')">Poha</td></tr>
+                    <tr><td onclick="selectItem2('Vermicelli')">Vermicelli</td></tr>
+                    <tr><td onclick="selectItem2('Idli rava')">Idli rava</td></tr>
+                    <tr><td onclick="selectItem2('Upma rava')">Upma rava</td></tr>
+                    <tr><td onclick="selectItem2('Chiroti rava')">Chiroti rava</td></tr>
+                    <tr><td onclick="selectItem2('Ragi flour')">Ragi flour</td></tr>
+                    <tr><td onclick="selectItem2('Jower Flour')">Jower Flour</td></tr>
+                    <tr><td onclick="selectItem2('Bajra Flour')">Bajra Flour</td></tr>
+                    <tr><td onclick="selectItem2('Barley')">Barley</td></tr>
+                    <tr><td onclick="selectItem2('Ground nut')">Ground nut</td></tr>
+                    <tr><td onclick="selectItem2('coconut')">coconut</td></tr>
+
+            </table>
+                </table>
+            </div>
+
+
+            <h2 class = "g3">Fruits</h2>
+            <h2 class = "g3">&nbsp;&nbsp;Pulses & Cereals&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;Sugars and sweeteners&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;Condiments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;Chocos and bread items&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            <!-- Table 6 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput19" placeholder="Search for an item..." oninput="showSuggestions(19)" autocomplete="off">
+                    <button onclick="searchTable(19)">Search</button>
+                    <div id="suggestions19" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable19">
+                    <tr><td onclick="selectItem2('Mango')">Mango</td></tr>
+                    <tr><td onclick="selectItem2('Apple')">Apple</td></tr>
+                    <tr><td onclick="selectItem2('Banana')">Banana</td></tr>
+                    <tr><td onclick="selectItem2('Grapes')">Grapes</td></tr>
+                    <tr><td onclick="selectItem2('Pomegranate')">pomegranate</td></tr>
+                    <tr><td onclick="selectItem2('Cherry')">Cherry</td></tr>
+                    <tr><td onclick="selectItem2('Strawberry')">Strawberry</td></tr>
+                    <tr><td onclick="selectItem2('Pineapple')">Pineapple</td></tr>
+                    <tr><td onclick="selectItem2('kiwi')">kiwi</td></tr>
+                    <tr><td onclick="selectItem2('Guava')">Guava</td></tr>
+                     <tr><td onclick="selectItem2('peach')">peach</td></tr>
+                    <tr><td onclick="selectItem2('Orange')">Orange</td></tr>
+                    <tr><td onclick="selectItem2('Papaya')">Papaya</td></tr>
+            </table>
+                </table>
+            </div>
+            <!-- Table 7 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput20" placeholder="Search for an item..." oninput="showSuggestions(20)" autocomplete="off">
+                    <button onclick="searchTable(20)">Search</button>
+                    <div id="suggestions20" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable20">
+                    <tr><td onclick="selectItem2('Corn')">Corn</td></tr>
+                        <tr><td onclick="selectItem2('Chana dal')">Chana dal</td></tr>
+                        <tr><td onclick="selectItem2('Urad dal')">Urad dal</td></tr>
+                        <tr><td onclick="selectItem2('Green gram')">Green gram</td></tr>
+                        <tr><td onclick="selectItem2('Chick peas')">Chick peas</td></tr>
+                        <tr><td onclick="selectItem2('Kidney beans')">Kidney beans</td></tr>
+                        <tr><td onclick="selectItem2('Ground nut')">Ground nut</td></tr>
+                        <tr><td onclick="selectItem2('coconut')">coconut</td></tr>
+                        <tr><td onclick="selectItem2('Moong dal')">Moong dal</td></tr>
+                        <tr><td onclick="selectItem2('Ragi')">Ragi</td></tr>
+                        <tr><td onclick="selectItem2('Peanut')">Peanut</td></tr>
+                        <tr><td onclick="selectItem2('Lentils')">Lentils</td></tr>
+                        <tr><td onclick="selectItem2('Oats')">Oats</td></tr>
+                        <tr><td onclick="selectItem2('Finger millet')">Finger millet</td></tr>
+
+            </table>
+                </table>
+            </div>
+
+            <!-- Table 8 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput21" placeholder="Search for an item..." oninput="showSuggestions(21)" autocomplete="off">
+                    <button onclick="searchTable(21)">Search</button>
+                    <div id="suggestions21" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable21">
+                    <tr><td onclick="selectItem2('Sugar')">Sugar</td></tr>
+                    <tr><td onclick="selectItem2('Honey')">Honey</td></tr>
+                    <tr><td onclick="selectItem2('Nectar')">Nectar</td></tr>
+                    <tr><td onclick="selectItem2('Glucose')">Glucose</td></tr>
+                    <tr><td onclick="selectItem2('Jaggery')">Jaggery</td></tr>
+                    <tr><td onclick="selectItem2('Chocolate sugar')">Chocolate sugar</td></tr>
+                    <tr><td onclick="selectItem2('Dark chocolate')">Dark chocolate</td></tr>
+                    <tr><td onclick="selectItem2('Fructose')">Fructose</td></tr>
+                    <tr><td onclick="selectItem2('Jam')">Jam</td></tr>
+                    <tr><td onclick="selectItem2('Sugarcane')">Sugarcane</td></tr>
+                    <tr><td onclick="selectItem2('Creams')">Creams</td></tr>
+
+            </table>
+                </table>
+            </div>
+
+            <!-- Table 9 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput22" placeholder="Search for an item..." oninput="showSuggestions(22)" autocomplete="off">
+                    <button onclick="searchTable(22)">Search</button>
+                    <div id="suggestions22" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable22">
+                    <tr><td onclick="selectItem2('Rock salt')">Rock salt</td></tr>
+                        <tr><td onclick="selectItem2('Rose water')">Rose water</td></tr>
+                        <tr><td onclick="selectItem2('Coconut water')">Coconut water</td></tr>
+                        <tr><td onclick="selectItem2(' Tomato Sauce')">Tomato Sauce</td></tr>
+                        <tr><td onclick="selectItem2('Chilli Sauce')">Chilli Sauce</td></tr>
+                        <tr><td onclick="selectItem2('Jam')">Jam</td></tr>
+                        <tr><td onclick="selectItem2('Soya sauce')">Soya sauce</td></tr>
+                        <tr><td onclick="selectItem2('Vinegar')">Vinegar</td></tr>
+                        <tr><td onclick="selectItem2('Mayonnaice')">Mayonnaice</td></tr>
+                        <tr><td onclick="selectItem2('Butter milk ranch')">Butter milk ranch</td></tr>
+                        <tr><td onclick="selectItem2('Vinegar powder')">Vinegar powder</td></tr>
+                        <tr><td onclick="selectItem2('Green Chutney')">Green Chutney</td></tr>
+                        <tr><td onclick="selectItem2('Lavender juice')">Lavender juice</td></tr>
+                        <tr><td onclick="selectItem2('collegen')">collegen</td></tr>
+                        <tr><td onclick="selectItem2('Extracts')">Extracts</td></tr>
+
+            </table>
+                </table>
+            </div>
+            <!-- Table 10 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput23" placeholder="Search for an item..." oninput="showSuggestions(23)" autocomplete="off">
+                    <button onclick="searchTable(23)">Search</button>
+                    <div id="suggestions23" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable23">
+                    <tr><td onclick="selectItem2('Cocoa')">Cocoa</td></tr>
+                    <tr><td onclick="selectItem2('Dark chocolate')">Dark chocolate</td></tr>
+                    <tr><td onclick="selectItem2('Candy')">Candy</td></tr>
+                    <tr><td onclick="selectItem2('Biscuits')">Biscuits</td></tr>
+                    <tr><td onclick="selectItem2('Jelly')">Jelly</td></tr>
+                    <tr><td onclick="selectItem2('Bread crumbs')">Bread crumbs</td></tr>
+                    <tr><td onclick="selectItem2('Rusk')">Rusk</td></tr>
+                    <tr><td onclick="selectItem2('Plain chips')">Plain chips</td></tr>
+                    <tr><td onclick="selectItem2('Sev')">Sev</td></tr>
+
+            </table>
+                </table>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <a href="feedback.html" target="_blank">
+            <button class="s1" onclick="saveScrollPosition()">Any Suggestions on ingredients??</button></a>
+    <!-- Basket at the bottom -->
+<div class="basket-container2">
+    <h2>Basket</h2>
+    <ul id="basket2"></ul>
+    <button id="findRecipesBtn" onclick="findRecipes2()">Find Recipes</button>
+</div>
+
+    <script src="script2.js"></script>
+</div>
+<div style="margin-bottom: 590px;"></div>
+
+    
+    
+
+    <div id = "target3">
+        <h1 class="he1">What's in your basket for shakes and desserts??</h1>
+        <button onclick="scrollWin(0,-5850)" class = "b7">Go Back</button>
+        <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fruits&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dairy products&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sweeteners and sugars&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        
+        
+        <div class="tables-row3">
+            <!-- Table 1 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput24" placeholder="Search for an item..." oninput="showSuggestions(24)" autocomplete="off">
+                    <button onclick="searchTable(24)">Search</button>
+                    <div id="suggestions24" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable24">
+                    <tr><td onclick="selectItem3('Mango')">Mango</td></tr>
+                    <tr><td onclick="selectItem3('Apple')">Apple</td></tr>
+                    <tr><td onclick="selectItem3('Banana')">Banana</td></tr>
+                    <tr><td onclick="selectItem3('Grapes')">Grapes</td></tr>
+                    <tr><td onclick="selectItem3('Pomegranate')">pomegranate</td></tr>
+                    <tr><td onclick="selectItem3('Cherry')">Cherry</td></tr>
+                    <tr><td onclick="selectItem3('Strawberry')">Strawberry</td></tr>
+                    <tr><td onclick="selectItem3('Pineapple')">Pineapple</td></tr>
+                    <tr><td onclick="selectItem3('kiwi')">kiwi</td></tr>
+                    <tr><td onclick="selectItem3('Guava')">Guava</td></tr>
+                     <tr><td onclick="selectItem3('peach')">peach</td></tr>
+                    <tr><td onclick="selectItem3('Orange')">Orange</td></tr>
+                    <tr><td onclick="selectItem3('Papaya')">Papaya</td></tr>
+
+            </table>
+                </table>
+            </div>
+    
+            <!-- Table 2 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput25" placeholder="Search for an item..." oninput="showSuggestions(25)" autocomplete="off">
+                    <button onclick="searchTable(25)">Search</button>
+                    <div id="suggestions25" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable25">
+                    <tr><td onclick="selectItem3('Butter')">Butter</td></tr>
+                    <tr><td onclick="selectItem3('Milk')">Milk</td></tr>
+                    <tr><td onclick="selectItem3('Ghee')">Ghee</td></tr>
+                    <tr><td onclick="selectItem3('Egg')">Egg</td></tr>
+                    <tr><td onclick="selectItem3('Curd')">Curd</td></tr>
+                    <tr><td onclick="selectItem3('Fried eggs')">Fried eggs</td></tr>
+                    <tr><td onclick="selectItem3('Cheese')">Cheese</td></tr>
+                    <tr><td onclick="selectItem3('Butter milk')">Butter milk</td></tr>
+                    <tr><td onclick="selectItem3('Milk powder')">milk powder</td></tr>
+                    <tr><td onclick="selectItem3('Paneer')">Paneer</td></tr>
+
+            </table>
+                </table>
+            </div>
+    
+            <!-- Table 3 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput26" placeholder="Search for an item..." oninput="showSuggestions(26)" autocomplete="off">
+                    <button onclick="searchTable(26)">Search</button>
+                    <div id="suggestions26" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable26">
+                    <tr><td onclick="selectItem3('Sugar')">Sugar</td></tr>
+                    <tr><td onclick="selectItem3('Honey')">Honey</td></tr>
+                    <tr><td onclick="selectItem3('Nectar')">Nectar</td></tr>
+                    <tr><td onclick="selectItem3('Glucose')">Glucose</td></tr>
+                    <tr><td onclick="selectItem3('Jaggery')">Jaggery</td></tr>
+                    <tr><td onclick="selectItem3('Chocolate sugar')">Chocolate sugar</td></tr>
+                    <tr><td onclick="selectItem3('Dark chocolate')">Dark chocolate</td></tr>
+                    <tr><td onclick="selectItem3('Fructose')">Fructose</td></tr>
+                    <tr><td onclick="selectItem3('Jam')">Jam</td></tr>
+                    <tr><td onclick="selectItem3('Sugarcane')">Sugarcane</td></tr>
+                    <tr><td onclick="selectItem3('Creams')">Creams</td></tr>
+
+            </table>
+                </table>
+            </div>
+
+
+            <h2 class = "g3">Sweet snacks</h2>
+            <h2 class = "g3">&nbsp;&nbsp;Ice creams&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            <h2 class = "g3">&nbsp;&nbsp;&nbsp;&nbsp;Suppliments&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            
+    
+            <!-- Table 4 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput27" placeholder="Search for an item..." oninput="showSuggestions(27)" autocomplete="off">
+                    <button onclick="searchTable(27)">Search</button>
+                    <div id="suggestions27" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable27">
+                    <tr><td onclick="selectItem3('Cookies')">Cookies</td></tr>
+                    <tr><td onclick="selectItem3('Chocolates')">Chocolates</td></tr>
+                    <tr><td onclick="selectItem3('Brownies')">Brownies</td></tr>
+                    <tr><td onclick="selectItem3('Muffins')">Muffins</td></tr>
+                    <tr><td onclick="selectItem3('Gummies')">Gummies</td></tr>
+                    <tr><td onclick="selectItem3('Yogurt')">Yogurt</td></tr>
+                    <tr><td onclick="selectItem3('Extracts')">Extracts</td></tr>
+
+            </table>
+                </table>
+            </div>
+            <!-- Table 5 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput28" placeholder="Search for an item..." oninput="showSuggestions(28)" autocomplete="off">
+                    <button onclick="searchTable(28)">Search</button>
+                    <div id="suggestions28" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable28">
+                    <tr><td onclick="selectItem3('Creams')">Creams</td></tr>
+                    <tr><td onclick="selectItem3('Stabilizers')">Stabilizers</td></tr>
+                    <tr><td onclick="selectItem3('Vennilla')">ennilla</td></tr>
+                    <tr><td onclick="selectItem3('Butterscotch')">Butterscotch</td></tr>
+                    <tr><td onclick="selectItem3('Choco')">Choco</td></tr>
+                    <tr><td onclick="selectItem3('Strawberry')">Strawberry</td></tr>
+                    <tr><td onclick="selectItem3('Peanut')">Peanut</td></tr>
+            </table>
+                </table>
+            </div>
+
+            <!-- Table 6 -->
+            <div class="table-container">
+                <div class="search-container">
+                    <input type="text" id="searchInput29" placeholder="Search for an item..." oninput="showSuggestions(29)" autocomplete="off">
+                    <button onclick="searchTable(29)">Search</button>
+                    <div id="suggestions29" class="suggestions-box"></div>
+                </div>
+                <table id="itemTable29">
+                    <tr><td onclick="selectItem3('Peanut')">Peanut</td></tr>
+                    <tr><td onclick="selectItem3('Almond')">Almond</td></tr>
+                    <tr><td onclick="selectItem3('Cashew')">Cashew</td></tr>
+                    <tr><td onclick="selectItem3('Wallnut')">Wallnut</td></tr>
+                    <tr><td onclick="selectItem3('Pista')">Pista</td></tr>
+                    <tr><td onclick="selectItem3('Chiya seeds')">Chiya seeds</td></tr>
+                    <tr><td onclick="selectItem3('Dry fruits')">Dry fruits</td></tr>
+
+            </table>
+                </table>
+            </div>
+            <br>
+        <br>
+        <br>
+        <a href="feedback.html" target="_blank">
+            <button class="s1">Any Suggestions on ingredients??</button></a>
+            
+        </div>
+
+    <!-- Basket at the bottom -->
+<div class="basket-container3">
+    <h2>Basket</h2>
+    <ul id="basket3"></ul>
+    <button id="findRecipesBtn" onclick="findRecipes3()">Find Recipes</button>
+</div>
+<div style="margin-bottom: 590px;"></div>
+
+    <script src="script3.js"></script>
+</div>
+
+
+</body>
+</html>
